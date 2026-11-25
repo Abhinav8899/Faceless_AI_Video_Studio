@@ -1,4 +1,0 @@
-#!/bin/bash
-# Resolve the repo folder from this script's real location (works through a ~/.local/bin symlink)
-HERE="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
-cd "$HERE" && exec .venv/bin/python -m pipeline.studio "$@"
