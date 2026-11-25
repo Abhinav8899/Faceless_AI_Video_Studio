@@ -1,0 +1,14 @@
+[Unit]
+Description=YesterVerse studio: renders scripts dropped in @REPO@/inbox
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@REPO@
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=@REPO@/.venv/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=@REPO@/.venv/bin/python -m pipeline.studio watch
+Restart=always
+RestartSec=10
+
+# No [Install] section on purpose: nothing starts at boot. Use `studio start` / `studio stop`.

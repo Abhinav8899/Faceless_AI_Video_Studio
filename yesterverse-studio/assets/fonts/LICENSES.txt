@@ -1,0 +1,2 @@
+| `Bangers-400.woff` | Bangers | © 2010 The Bangers Project Authors | Google Fonts |
+| `Cinzel-400.woff` `Cinzel-700.woff` | Cinzel | © 2020 The Cinzel Project Authors | Google Fonts |
