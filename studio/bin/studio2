@@ -1,0 +1,2 @@
+#!/bin/bash
+cd /home/abhinav/youtube/studio2 && exec .venv/bin/python -m pipeline.studio "$@"
