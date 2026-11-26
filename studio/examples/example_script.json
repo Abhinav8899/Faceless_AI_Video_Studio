@@ -1,0 +1,226 @@
+{
+  "project": "trieste-deepest-dive",
+  "style": "The Pacific Ocean near Guam, January 1960.",
+  "defaults": {
+    "seed": 7500,
+    "tail_silence": 0.3,
+    "scene_gap": 0.15
+  },
+  "meta": {
+    "angle": "Two men dropped seven miles to the deepest point on Earth in a steel ball, and a window nearly cracked.",
+    "hook": "The submarine sinking into the dark; the narrator states the dive.",
+    "titles": [
+      "The Steel Ball That Fell Seven Miles",
+      "Two Men Reached the Deepest Point on Earth",
+      "The Dive Nobody Has Repeated for Fifty Years"
+    ],
+    "description": "In 1960 two men sank to the bottom of the Challenger Deep.\n\nHow the Trieste got there, and what nearly went wrong.\n\nSubscribe for more true stories.",
+    "tags": [
+      "Trieste",
+      "Challenger Deep",
+      "Mariana Trench",
+      "Jacques Piccard",
+      "deep sea"
+    ],
+    "thumbnails": [
+      {
+        "description": "The submarine dropping into black water, one porthole glowing",
+        "concept": "Dread and scale: a tiny light in endless dark",
+        "image_prompt": "Close-up of the submarine sinking into pitch-black water, a single porthole glowing, tiny particles drifting",
+        "text": "7 MILES DOWN",
+        "subjects": [
+          "trieste"
+        ]
+      },
+      {
+        "description": "The man's face pressed to the porthole, eyes wide",
+        "concept": "Curiosity: what is he seeing?",
+        "image_prompt": "Close-up of the man's face at a thick round porthole, eyes wide, lit by a dim lamp",
+        "text": "",
+        "subjects": [
+          {
+            "id": "piccard",
+            "look": "diving"
+          }
+        ]
+      },
+      {
+        "description": "A crack spreading across a thick round window",
+        "concept": "Tension: will it hold?",
+        "image_prompt": "A thick round porthole window with a thin crack spreading across it, dark water behind",
+        "text": "TWO WORDS",
+        "text_position": "top"
+      }
+    ],
+    "retention_notes": [
+      "open loop in scene 02 (the window) to be paid off later"
+    ]
+  },
+  "subjects": [
+    {
+      "id": "piccard",
+      "kind": "person",
+      "name": "Jacques Piccard",
+      "noun": "man",
+      "design": "a tall lean Swiss man of thirty-seven, long narrow face, high forehead, receding dark hair combed back, thin straight nose, round wire glasses, pale skin",
+      "look": "grey wool sweater over a white shirt, dark trousers",
+      "looks": {
+        "diving": "thick knitted jumper, wool cap, headphones around the neck"
+      }
+    },
+    {
+      "id": "trieste",
+      "kind": "vehicle",
+      "name": "the Trieste",
+      "noun": "submarine",
+      "design": "a bathyscaphe: a long grey cigar-shaped float with a small conning tower on top and a single round steel crew sphere hanging underneath, two portholes, rust streaks"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "01",
+      "type": "still",
+      "chapter": "Seven Miles Down",
+      "narration": "[nar|temperature:0.7] Two men sealed themselves inside a steel ball and dropped seven miles into the dark.",
+      "image_prompt": "The submarine sinking into black water, a faint beam of light from its porthole, tiny glowing particles drifting past",
+      "subjects": [
+        "trieste"
+      ],
+      "camera": "push_in"
+    },
+    {
+      "id": "02",
+      "type": "still",
+      "narration": "[nar|temperature:0.7] Nobody knew if the window would hold, and by the end, you'll see how close it came.",
+      "image_prompt": "Close-up of the man peering through a small thick porthole, lit by a dim cabin lamp",
+      "subjects": [
+        {
+          "id": "piccard",
+          "look": "diving"
+        }
+      ],
+      "camera": "push_in",
+      "overlays": [
+        {
+          "kind": "title",
+          "text": "THE DEEPEST DIVE",
+          "start": 0.4,
+          "end": 3.0,
+          "position": "top"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "type": "map",
+      "narration": "[nar|temperature:0.7] The target was the Challenger Deep, south of Guam in the Pacific.",
+      "map": {
+        "bbox": [
+          138.0,
+          8.0,
+          150.0,
+          16.5
+        ],
+        "places": [
+          {
+            "name": "Guam",
+            "lon": 144.8,
+            "lat": 13.4
+          },
+          {
+            "name": "Challenger Deep",
+            "lon": 142.2,
+            "lat": 11.35
+          }
+        ],
+        "route": [
+          [
+            144.8,
+            13.4
+          ],
+          [
+            143.9,
+            12.6
+          ],
+          [
+            142.2,
+            11.35
+          ]
+        ],
+        "regions": [
+          {
+            "name": "Pacific Ocean",
+            "lon": 146.5,
+            "lat": 9.5
+          }
+        ]
+      },
+      "chapter": "Into the Trench"
+    },
+    {
+      "id": "04",
+      "type": "wan",
+      "narration": "[nar|temperature:0.7] On the morning of the dive, the sea was rough enough to smash equipment, and the telephone to the surface had already failed.",
+      "image_prompt": "The submarine rolling in heavy grey waves beside a small navy tug, spray flying over the deck",
+      "subjects": [
+        "trieste"
+      ],
+      "motion_prompt": "waves rise and fall around the submarine, the camera stays still"
+    },
+    {
+      "id": "05",
+      "type": "still",
+      "narration": "[nar|temperature:0.7] Nearly five hours later, they touched the bottom, ten thousand nine hundred metres down.",
+      "image_prompt": "The submarine resting on a pale silty sea floor in total darkness, its lamp lighting a small cloud of silt",
+      "subjects": [
+        "trieste"
+      ],
+      "camera": "pull_out",
+      "overlays": [
+        {
+          "kind": "stat",
+          "text": "10,916 M",
+          "label": "BELOW THE SURFACE",
+          "start": 0.6
+        }
+      ],
+      "sfx": [
+        {
+          "name": "thud",
+          "at": 0.4,
+          "volume_db": -10
+        }
+      ],
+      "chapter": "The Bottom"
+    },
+    {
+      "id": "06",
+      "type": "still",
+      "narration": "[nar|temperature:0.7] If you would never climb into that steel ball, hit like and subscribe for more true stories.",
+      "image_prompt": "The man smiling with relief as he climbs out of a round hatch into bright daylight, sea spray around him",
+      "subjects": [
+        {
+          "id": "piccard",
+          "look": "diving"
+        }
+      ],
+      "camera": "static",
+      "overlays": [
+        {
+          "kind": "subscribe",
+          "start": 0.5
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "type": "still",
+      "narration": "[nar|temperature:0.7] The window held, but it had cracked on the way down, and nobody returned for fifty-two years.",
+      "image_prompt": "The submarine floating on calm blue water at sunset beside a small navy tug, seen from far away",
+      "subjects": [
+        "trieste"
+      ],
+      "camera": "pull_out"
+    }
+  ]
+}

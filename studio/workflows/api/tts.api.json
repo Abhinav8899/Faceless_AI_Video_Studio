@@ -1,0 +1,71 @@
+{
+  "1": {
+    "inputs": {
+      "model_variant": "TTS - Base 1.7B (Voice Clone)",
+      "device": "auto",
+      "voice_preset": "None (Zero-shot / Custom)",
+      "language": "English",
+      "instruct": "",
+      "top_k": 50,
+      "top_p": 1,
+      "temperature": 0.9,
+      "repetition_penalty": 1.05,
+      "max_new_tokens": 2048,
+      "dtype": "auto",
+      "attn_implementation": "auto",
+      "x_vector_only_mode": false,
+      "use_torch_compile": false,
+      "use_cuda_graphs": false,
+      "compile_mode": "default",
+      "asr_use_forced_aligner": true,
+      "asr_translate_target_language": "English",
+      "asr_translate_instruction_override": "Translate the speech from {source_language} into {target_language} text. Return only the translated text.",
+      "runtime_mode": "⚠️ Shared Runtime"
+    },
+    "class_type": "Qwen3TTSEngineNode",
+    "_meta": {
+      "title": "⚙️ Qwen3-TTS Engine",
+      "cnr_id": "tts_audio_suite",
+      "ver": "59d4cd46d3be74ef1148b97dc512d8b339601417"
+    }
+  },
+  "2": {
+    "inputs": {
+      "text": "",
+      "narrator_voice": "nar.wav",
+      "seed": 1514752567,
+      "enable_chunking": true,
+      "max_chars_per_chunk": 400,
+      "chunk_combination_method": "auto",
+      "silence_between_chunks_ms": 100,
+      "enable_audio_cache": true,
+      "batch_size": 0,
+      "TTS_engine": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "UnifiedTTSTextNode",
+    "_meta": {
+      "title": "🎤 TTS Text",
+      "cnr_id": "tts_audio_suite",
+      "ver": "59d4cd46d3be74ef1148b97dc512d8b339601417"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "format": "flac",
+      "audio": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "SaveAudioAdvanced",
+    "_meta": {
+      "title": "Save Audio (Advanced)",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.0"
+    }
+  }
+}
