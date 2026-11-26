@@ -1,3 +1,0 @@
-#!/bin/bash
-# Runs the studio from its own folder, wherever the repo was cloned. Symlink it into ~/.local/bin to use it anywhere.
-cd "$(dirname "$(readlink -f "$0")")/.." && exec .venv/bin/python -m pipeline.studio "$@"
