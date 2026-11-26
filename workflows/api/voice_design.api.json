@@ -1,0 +1,124 @@
+{
+  "5": {
+    "inputs": {
+      "audio": [
+        "17",
+        1
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.0"
+    }
+  },
+  "17": {
+    "inputs": {
+      "reference_text": "Welcome to the TTS Audio Suite. This text-to-speech toolkit brings your stories to life with natural, expressive voices. Whether you're creating audiobooks, videos, or interactive experiences, the available models offer a wide range of voices and capabilities. What will you create today?",
+      "seed": 1,
+      "voice_instruction": "Young adult male, warm and enthusiastic tone, slightly goofy, bright medium pitch, energetic and friendly pace, upbeat delivery",
+      "TTS_engine": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "UnifiedVoiceDesignerNode",
+    "_meta": {
+      "title": "🎨 Voice Designer",
+      "cnr_id": "tts_audio_suite",
+      "aux_id": "diodiogod/TTS-Audio-Suite",
+      "ver": "59d4cd46d3be74ef1148b97dc512d8b339601417"
+    }
+  },
+  "18": {
+    "inputs": {
+      "source": [
+        "17",
+        2
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.0"
+    }
+  },
+  "19": {
+    "inputs": {
+      "character_name": "new_voice",
+      "overwrite_character": false,
+      "opt_narrator": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "SaveCharacterVoiceNode",
+    "_meta": {
+      "title": "💾 Save Character Voice",
+      "cnr_id": "tts_audio_suite",
+      "aux_id": "diodiogod/TTS-Audio-Suite",
+      "ver": "59d4cd46d3be74ef1148b97dc512d8b339601417"
+    }
+  },
+  "21": {
+    "inputs": {
+      "model_variant": "Voice Design - 1.7B VoiceDesign",
+      "device": "auto",
+      "voice_preset": "None (Zero-shot / Custom)",
+      "language": "English",
+      "instruct": "",
+      "top_k": 50,
+      "top_p": 1,
+      "temperature": 0.9,
+      "repetition_penalty": 1.05,
+      "max_new_tokens": 2048,
+      "dtype": "auto",
+      "attn_implementation": "auto",
+      "x_vector_only_mode": false,
+      "use_torch_compile": false,
+      "use_cuda_graphs": false,
+      "compile_mode": "default",
+      "asr_use_forced_aligner": true,
+      "asr_translate_target_language": "English",
+      "asr_translate_instruction_override": "Translate the speech from {source_language} into {target_language} text. Return only the translated text.",
+      "runtime_mode": "⚠️ Shared Runtime"
+    },
+    "class_type": "Qwen3TTSEngineNode",
+    "_meta": {
+      "title": "⚙️ Qwen3-TTS Engine",
+      "cnr_id": "tts_audio_suite",
+      "aux_id": "diodiogod/TTS-Audio-Suite",
+      "ver": "59d4cd46d3be74ef1148b97dc512d8b339601417"
+    }
+  },
+  "26": {
+    "inputs": {
+      "source": [
+        "19",
+        2
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.0"
+    }
+  },
+  "27": {
+    "inputs": {
+      "source": [
+        "19",
+        1
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text",
+      "cnr_id": "comfy-core",
+      "ver": "0.46.0"
+    }
+  }
+}
